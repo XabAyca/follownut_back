@@ -1,6 +1,6 @@
 class Api::V1::PatientsController < Api::BaseController
-  before_action :authenticate_user!
-  before_action :find_patient, only: %w[show index]
+
+  before_action :find_patient, only: %w[show]
 
   def show
     render_jsonapi_response(@patient)

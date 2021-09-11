@@ -1,6 +1,6 @@
 class Api::V1::NutritionistsController < Api::BaseController
 
-  before_action :find_nutritionist, only: %w[show index]
+  before_action :find_nutritionist, only: %w[show]
 
   def show
     render_jsonapi_response(@nutritionist)
