@@ -1,24 +1,8 @@
-# README
+# README (french)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bienvenu sur FollowNut!
 
-Things you may want to cover:
+Cette application est destinée à régir les liens entre les nutrisionnistes et leurs patient.
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
