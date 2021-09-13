@@ -11,5 +11,5 @@ class Nutritionist < ApplicationRecord
   validates :email, presence: true
   validates :api_key, presence: true, uniqueness: true
   validates :slug_calendly, presence: true, format: { with: /https:\/\/calendly.com\/.*/ }, uniqueness: true
-
+  has_many :appointments
 end
