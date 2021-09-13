@@ -6,6 +6,9 @@
 
 # Ignore bundler config.
 /.bundle
+/.bundle
+*/bundle
+./bundle
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -29,3 +32,4 @@
 # Ignore secret Key
 .env
 /.env
+./env

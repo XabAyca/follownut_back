@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :patients, only: %i[show index]
       resources :nutritionists, only: %i[show index]
+      resources :appointments
     end
   end
 
@@ -32,5 +33,10 @@ Rails.application.routes.draw do
     sessions: 'sessions',
     registrations: 'registrations'
   }
+
+  post 'api/patient/password/forgot', to: 'patient_passwords#forgot'
+  post 'api/patient/password/reset', to: 'patient_passwords#reset'
+  post 'api/nutritionist/password/forgot', to: 'nutritionist_passwords#forgot'
+  post 'api/nutritionist/password/reset', to: 'nutritionist_passwords#reset'
 
 end

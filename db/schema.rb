@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_11_080749) do
+ActiveRecord::Schema.define(version: 2021_09_13_133340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appointments", force: :cascade do |t|
+    t.bigint "patient_id"
+    t.bigint "nutritionist_id"
+    t.datetime "date"
+    t.text "content"
+    t.float "weight"
+    t.float "height"
+    t.float "body_fat"
+    t.float "muscle_mass"
+    t.float "visceral_fat"
+    t.float "BMI"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["nutritionist_id"], name: "index_appointments_on_nutritionist_id"
+    t.index ["patient_id"], name: "index_appointments_on_patient_id"
+  end
 
   create_table "jwt_denylist", force: :cascade do |t|
     t.string "jti", null: false
