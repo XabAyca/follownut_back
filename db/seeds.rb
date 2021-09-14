@@ -16,12 +16,15 @@ p "Destroying Patients... #{Patient.count} "
 Patient.destroy_all
 p "Destroying Nutritionists... #{Nutritionist.count} "
 Nutritionist.destroy_all
+p "Destroying Appointments... #{Appointment.count} "
+Appointment.destroy_all
 p "-" * 50
 p "-" * 50
 
 ############################################
 patients_number = 15
 nutritionists_number = 5
+appointments_number = 50
 ############################################
 
 # Create patients
@@ -52,8 +55,27 @@ nutritionists_number.times do |i|
     password_confirmation:"azerty123",
   )
   system("clear")
-  puts "#{i+1} patients created"
+  puts "#{i+1} nutritionists created"
   puts "|"+("█"*(i+1))+(" "*((nutritionists_number-1)-i))+"|"
+end
+
+# Create appointments
+appointments_number.times do |i|
+  Appointment.create(
+    patient_id:Patient.all.sample.id,
+    nutritionist_id:Nutritionist.all.sample.id,
+    date:Faker::Date.between(from: 1.year.ago, to: Date.today),
+    content:Faker::Lorem.paragraph_by_chars(number: 500),
+    height:rand(1.5...1.9),
+    weight:rand(45...100),
+    body_fat:rand(10...35),
+    visceral_fat:rand(10...35),
+    muscle_mass:rand(40...60),
+    BMI:rand(20...30),
+  )
+  system("clear")
+  puts "#{i+1} appointments created"
+  puts "|"+("█"*((i+1)/2))+(" "*(((appointments_number-1)-i)/2))+"|"
 end
 
 puts ""
