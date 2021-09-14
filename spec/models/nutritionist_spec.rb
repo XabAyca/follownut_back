@@ -12,28 +12,45 @@ RSpec.describe Nutritionist, type: :model do
     expect(@nutritionist1).to be_valid
   end
 
-  it "is not valid without first_name" do
+  it "is  valid without first_name" do
     nutritionist2 = FactoryBot.build(:nutritionist, first_name: nil)
-    expect(nutritionist2).to_not be_valid
+    expect(nutritionist2).to be_valid
   end
 
-  it "is not valid without last_name" do
+  it "is valid without last_name" do
     nutritionist2 = FactoryBot.build(:nutritionist, last_name: nil)
-    expect(nutritionist2).to_not be_valid
+    expect(nutritionist2).to be_valid
   end
 
-  it "is not valid without phone_number" do
+  it "is valid without phone_number" do
     nutritionist2 = FactoryBot.build(:nutritionist, phone_number: nil)
-    expect(nutritionist2).to_not be_valid
+    expect(nutritionist2).to be_valid
   end
 
-  it "is not valid without api_key" do
+  it "is valid without api_key" do
     nutritionist2 = FactoryBot.build(:nutritionist, api_key: nil)
+    expect(nutritionist2).to be_valid
+  end
+
+  it "is not valid with existing api_key" do
+    nutritionist = FactoryBot.create(:nutritionist)
+    nutritionist2 = FactoryBot.build(:nutritionist, api_key: "LHCEDBKOUYNDAX5PV5SFGY3OB3TUPGCF")
     expect(nutritionist2).to_not be_valid
   end
 
-  it "is not valid without slug_calendly" do
+  it "is valid without slug_calendly" do
     nutritionist2 = FactoryBot.build(:nutritionist, slug_calendly: nil)
+    expect(nutritionist2).to be_valid
+  end
+
+  it "is not valid with existing slug_calendly" do
+    nutritionist = FactoryBot.create(:nutritionist)
+    nutritionist2 = FactoryBot.build(:nutritionist, slug_calendly: "https://calendly.com/john")
+    expect(nutritionist2).to_not be_valid
+  end
+
+  it "is not valid with slug_calendly wrong format" do
+    nutritionist2 = FactoryBot.build(:nutritionist, slug_calendly: "https://anthony.com/john")
     expect(nutritionist2).to_not be_valid
   end
 
