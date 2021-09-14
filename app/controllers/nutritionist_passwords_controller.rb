@@ -9,7 +9,7 @@ class NutritionistPasswordsController < ApplicationController
 
     if @nutritionist.present?
       @nutritionist.generate_password_token! #generate pass token
-      # SEND EMAIL HERE
+      NutritionistMailer.reset_password_email(@nutritionist).deliver_now   
       render json: {status: 'ok'}, status: :ok
     else
       render json: {error: ['Email non trouvé. Vérifiez puis recommencez']}, status: :not_found

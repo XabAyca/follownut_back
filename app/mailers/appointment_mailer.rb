@@ -1,9 +1,8 @@
 class AppointmentMailer < ApplicationMailer
  
-  def new_appointment_email(patient)
-    @patient = patient 
-    @url  = 'https://follownut.herokuapp.com/' 
-    mail(to: @patient.email, subject: 'Bienvenue chez nous !') 
+  def new_appointment_email(appointment)
+    @appointment = appointment
+    mail(to: @appointment.patient.email, subject: 'Votre compte rendu est en ligne !') 
   end
   
 end

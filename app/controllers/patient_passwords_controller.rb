@@ -9,7 +9,7 @@ class PatientPasswordsController < ApplicationController
 
     if @patient.present?
       @patient.generate_password_token! #generate pass token
-      # SEND EMAIL HERE
+      PatientMailer.reset_password_email(@patient).deliver_now
       render json: {status: 'ok'}, status: :ok
     else
       render json: {error: ['Email non trouvé. Vérifiez puis recommencez']}, status: :not_found
