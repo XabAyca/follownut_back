@@ -62,11 +62,9 @@ describe Api::V1::AppointmentsController, type: :request do
 
   context 'When UPDATE an appointment' do
     before do
-      login_nutritionist_with_api(nutritionist)
       create_patient()
       create_nutritionist()
-      create_appointments()
-      FactoryBot.build(:appointment,
+      FactoryBot.create(:appointment,
       patient_id:Patient.all.sample.id,
       nutritionist_id:Nutritionist.last.id,
       date:"12/12/2021",
@@ -105,11 +103,9 @@ describe Api::V1::AppointmentsController, type: :request do
 
   context 'When DELETE an appointment' do
     before do
-      login_nutritionist_with_api(nutritionist)
       create_patient()
       create_nutritionist()
-      create_appointments()
-      FactoryBot.build(:appointment,
+      FactoryBot.create(:appointment,
       patient_id:Patient.all.sample.id,
       nutritionist_id:Nutritionist.last.id,
       date:"12/12/2021",
@@ -125,7 +121,7 @@ describe Api::V1::AppointmentsController, type: :request do
     it "return nothing" do
       headers = { 'Content-Type' => 'application/json' }
       # This will add a valid token for `user` in the `Authorization` header
-      auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, nutritionist)
+      auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, Nutritionist.last)
 
       delete "/api/v1/appointments/#{Appointment.last.id}", headers: auth_headers
 
