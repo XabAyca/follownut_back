@@ -7,7 +7,6 @@ RSpec.describe Patient, type: :model do
   end
 
   it "is valid with valid attributes" do
-
     expect(@patient1).to be_valid
   end
 

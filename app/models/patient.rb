@@ -10,6 +10,7 @@ class Patient < ApplicationRecord
 
   ## Relations
   has_many :appointments
+  belongs_to :nutritionist, optional: true
 
   ## Methods
   after_create :welcome_send

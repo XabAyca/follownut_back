@@ -12,6 +12,7 @@ class Nutritionist < ApplicationRecord
 
   ## Relations
   has_many :appointments
+  has_many :patients
 
   ## Methods
   after_create :welcome_send

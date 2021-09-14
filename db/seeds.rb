@@ -27,20 +27,6 @@ nutritionists_number = 5
 appointments_number = 50
 ############################################
 
-# Create patients
-patients_number.times do |i|
-  Patient.create(
-    first_name:Faker::Name.first_name,
-    last_name:Faker::Name.last_name,
-    email:Faker::Internet.free_email,
-    password:"azerty123",
-    password_confirmation:"azerty123",
-  )
-  system("clear")
-  puts "#{i+1} patients created"
-  puts "|"+("█"*(i+1))+(" "*((patients_number-1)-i))+"|"
-end
-
 # Create nutritionists
 nutritionists_number.times do |i|
   Nutritionist.create(
@@ -57,6 +43,21 @@ nutritionists_number.times do |i|
   system("clear")
   puts "#{i+1} nutritionists created"
   puts "|"+("█"*(i+1))+(" "*((nutritionists_number-1)-i))+"|"
+end
+
+# Create patients
+patients_number.times do |i|
+  Patient.create(
+    first_name:Faker::Name.first_name,
+    last_name:Faker::Name.last_name,
+    email:Faker::Internet.free_email,
+    password:"azerty123",
+    password_confirmation:"azerty123",
+    nutritionist_id:Nutritionist.all.sample.id,
+  )
+  system("clear")
+  puts "#{i+1} patients created"
+  puts "|"+("█"*(i+1))+(" "*((patients_number-1)-i))+"|"
 end
 
 # Create appointments
