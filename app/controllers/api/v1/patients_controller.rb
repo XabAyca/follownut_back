@@ -7,7 +7,7 @@ class Api::V1::PatientsController < Api::BaseController
   end
 
   def index
-    render json: Patient.all
+    render json: Patient.all, include: :nutritionist
   end
 
   private

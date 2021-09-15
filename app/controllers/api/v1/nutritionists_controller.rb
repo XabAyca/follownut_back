@@ -7,7 +7,7 @@ class Api::V1::NutritionistsController < Api::BaseController
   end
 
   def index
-    render json: Nutritionist.all
+    render json: Nutritionist.all, include: :patients
   end
 
   private
