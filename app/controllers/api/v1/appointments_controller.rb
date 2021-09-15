@@ -22,7 +22,7 @@ class Api::V1::AppointmentsController < Api::BaseController
   end
 
   def index
-    render json: Appointment.all
+    render json: Appointment.all, include: [:nutritionist, :patient]
   end
 
   def update

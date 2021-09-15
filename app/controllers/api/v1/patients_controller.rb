@@ -3,7 +3,7 @@ class Api::V1::PatientsController < Api::BaseController
   before_action :find_patient, only: %w[show]
 
   def show
-    render_jsonapi_response(@patient)
+    render json: @patient, include: :nutritionist
   end
 
   def index
