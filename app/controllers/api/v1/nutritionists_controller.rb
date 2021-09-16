@@ -1,6 +1,6 @@
 class Api::V1::NutritionistsController < Api::BaseController
 
-  before_action :find_nutritionist, only: %w[show]
+  before_action :find_nutritionist, only: %w[show update]
 
   def show
     render json: @nutritionist, include: :patients
