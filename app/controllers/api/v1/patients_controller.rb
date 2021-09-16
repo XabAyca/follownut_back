@@ -31,7 +31,7 @@ class Api::V1::PatientsController < Api::BaseController
   end
 
   def patient_params
-    params.require(:patient).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:patient).permit(:first_name, :last_name, :email, :password, :password_confirmation, :nutritionist_id)
   end
 
   def is_admin
