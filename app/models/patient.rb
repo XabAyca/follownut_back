@@ -9,7 +9,7 @@ class Patient < ApplicationRecord
   validates :email, presence: true
 
   ## Relations
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   belongs_to :nutritionist, optional: true
 
   ## Methods

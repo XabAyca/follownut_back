@@ -12,7 +12,7 @@ class Nutritionist < ApplicationRecord
 
   ## Relations
   has_many :appointments
-  has_many :patients
+  has_many :patients, dependent: :nullify
 
   ## Methods
   after_create :welcome_send
