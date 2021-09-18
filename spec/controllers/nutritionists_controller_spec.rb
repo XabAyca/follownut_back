@@ -17,8 +17,7 @@ describe Api::V1::NutritionistsController, type: :request do
     end
 
     it 'returns the nutritionist' do
-      expect(json['data']).to have_id(nutritionist.id.to_s)
-      expect(json['data']).to have_type('nutritionists')
+      expect(json['id']).to eq(nutritionist.id)
     end
   end
 

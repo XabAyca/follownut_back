@@ -17,8 +17,7 @@ describe Api::V1::PatientsController, type: :request do
     end
 
     it 'returns the patient' do
-      expect(json['data']).to have_id(patient.id.to_s)
-      expect(json['data']).to have_type('patients')
+      expect(json['id']).to eq(patient.id)
     end
   end
 

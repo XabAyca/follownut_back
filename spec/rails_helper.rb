@@ -69,5 +69,6 @@ RSpec.configure do |config|
   config.include LogbooksHelpers
   config.include ArticlesHelpers
   config.include JSONAPI::RSpec
+  config.jsonapi_indifferent_hash = true
   config.include ApiHelpers
 end
