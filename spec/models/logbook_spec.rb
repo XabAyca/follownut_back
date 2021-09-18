@@ -4,12 +4,10 @@ RSpec.describe Logbook, type: :model do
 
   before (:all)do
     FactoryBot.create(:patient)
-    FactoryBot.create(:nutritionist)
-    @logbook1 = FactoryBot.build(:appointment)
+    @logbook1 = FactoryBot.build(:logbook)
   end
 
   after (:all) do
-    Nutritionist.destroy_all
     Logbook.destroy_all
     Patient.destroy_all
   end
@@ -33,7 +31,7 @@ RSpec.describe Logbook, type: :model do
     expect(logbook).to_not be_valid
   end
 
-  it "is not valid with inexting  patient_id" do
+  it "is not valid with inexting patient_id" do
     logbook = FactoryBot.build(:logbook, patient_id: 999)
     expect(logbook).to_not be_valid
   end
