@@ -5,6 +5,8 @@ class DeviseCreatePatients < ActiveRecord::Migration[6.1]
     create_table :patients do |t|
       t.string :first_name
       t.string :last_name
+      t.integer :gender, default: 0
+      t.date :date_of_birth
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""

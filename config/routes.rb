@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :patients, only: %i[show index update destroy]
       resources :nutritionists, only: %i[show index update destroy]
       resources :appointments
+      resources :logbooks, only: %i[show index update destroy]
     end
   end
 

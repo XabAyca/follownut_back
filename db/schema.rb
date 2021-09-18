@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_150006) do
+ActiveRecord::Schema.define(version: 2021_09_18_011054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 2021_09_14_150006) do
     t.index ["jti"], name: "index_jwt_denylist_on_jti"
   end
 
+  create_table "logbooks", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.boolean "is_shared", default: false
+    t.bigint "patient_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["patient_id"], name: "index_logbooks_on_patient_id"
+  end
+
   create_table "nutritionists", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -59,6 +69,8 @@ ActiveRecord::Schema.define(version: 2021_09_14_150006) do
   create_table "patients", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.integer "gender", default: 0
+    t.date "date_of_birth"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

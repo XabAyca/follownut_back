@@ -11,9 +11,14 @@ class Patient < ApplicationRecord
   ## Relations
   has_many :appointments, dependent: :destroy
   belongs_to :nutritionist, optional: true
+  has_many :logbooks, dependent: :destroy
 
   ## Methods
   after_create :welcome_send
+
+  ## Gender options
+  enum gender: [:unknown, :male, :female]
+
 
   def welcome_send
     PatientMailer.welcome_email(self).deliver_now
@@ -33,6 +38,10 @@ class Patient < ApplicationRecord
     self.reset_password_token = nil
     self.password = password
     save!
+  end
+
+  def age
+    ((Date.today - date_of_birth) / 365).to_i
   end
 
   private
