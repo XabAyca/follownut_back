@@ -2,7 +2,7 @@ class Api::V1::LogbooksController < Api::BaseController
   
   before_action :find_logbook, only: [:show, :update, :destroy]
   before_action :authenticate_patient!, only: %i[create update destroy]
-  before_action :is_admin, only: %i[update destroy]
+  before_action :is_author, only: %i[update destroy]
 
   # GET /logbooks
   def index
@@ -11,7 +11,7 @@ class Api::V1::LogbooksController < Api::BaseController
 
   # GET /logbooks/1
   def show
-    render json: @logbook
+    render json: @logbook, include: :patient
   end
 
   # POST /logbooks
@@ -43,7 +43,6 @@ class Api::V1::LogbooksController < Api::BaseController
 
 
   private
-
     def find_logbook
       @logbook = Logbook.find(params[:id])
     end
@@ -52,7 +51,7 @@ class Api::V1::LogbooksController < Api::BaseController
       params.require(:logbook).permit(:title, :content, :is_shared, :patient_id)
     end
   
-    def is_admin
+    def is_author
       if @logbook.patient != current_patient
         render json: {error:"Non authorisé"}, status: :unauthorized
       end

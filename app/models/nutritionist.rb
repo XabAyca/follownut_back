@@ -12,6 +12,7 @@ class Nutritionist < ApplicationRecord
 
   ## Relations
   has_many :appointments
+  has_many :articles
   has_many :patients, dependent: :nullify
 
   ## Methods
