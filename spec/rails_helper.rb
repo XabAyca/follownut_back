@@ -66,6 +66,7 @@ RSpec.configure do |config|
   config.include PatientHelpers
   config.include AppointmentsHelpers
   config.include NutritionistHelpers
+  config.include LogbooksHelpers
   config.include JSONAPI::RSpec
   config.include ApiHelpers
 end

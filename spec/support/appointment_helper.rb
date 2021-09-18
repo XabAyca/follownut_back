@@ -14,7 +14,7 @@ module AppointmentsHelpers
       body_fat:70,
       visceral_fat:70,
       muscle_mass:30
-        )
+    )
   end
 
     def build_appointments
@@ -28,7 +28,7 @@ module AppointmentsHelpers
       body_fat:30,
       visceral_fat:30,
       muscle_mass:30
-        )
+    )
   end
 
 end

@@ -6,7 +6,7 @@ describe Api::V1::AppointmentsController, type: :request do
   let (:patient) { create_patient }
   let (:nutritionist) { create_nutritionist }
   let (:token) { nutritionist.token}
-  let (:appointments_url) { '/api/v1/properties' }
+  let (:appointments_url) { '/api/v1/appointments' }
   
   context 'When GET all appointments' do
     before do
