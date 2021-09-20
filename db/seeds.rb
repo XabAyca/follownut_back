@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 Faker::Config.locale = 'fr'
 p "*" * 50
 p " " * 50
@@ -18,13 +11,16 @@ p "Destroying Nutritionists... #{Nutritionist.count} "
 Nutritionist.destroy_all
 p "Destroying Appointments... #{Appointment.count} "
 Appointment.destroy_all
+p "Destroying Logbooks... #{Logbook.count} "
+Logbook.destroy_all
 p "-" * 50
 p "-" * 50
 
 ############################################
 patients_number = 15
 nutritionists_number = 5
-appointments_number = 50
+appointments_number = 20
+logbooks_number = 10
 ############################################
 
 # Create nutritionists
@@ -50,6 +46,7 @@ patients_number.times do |i|
   Patient.create(
     first_name:Faker::Name.first_name,
     last_name:Faker::Name.last_name,
+    date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
     email:Faker::Internet.free_email,
     password:"azerty123",
     password_confirmation:"azerty123",
@@ -77,6 +74,18 @@ appointments_number.times do |i|
   system("clear")
   puts "#{i+1} appointments created"
   puts "|"+("█"*((i+1)/2))+(" "*(((appointments_number-1)-i)/2))+"|"
+end
+
+# Create logbooks
+logbooks_number.times do |i|
+  Logbook.create(
+    patient_id: Patient.all.sample.id,
+    title: Faker::Lorem.question(word_count: 20),
+    content: Faker::Lorem.paragraph(sentence_count: 15),
+  )
+  system("clear")
+  puts "#{i+1} logbooks created"
+  puts "|"+("█"*((i+1)/2))+(" "*(((logbooks_number-1)-i)/2))+"|"
 end
 
 puts ""
