@@ -28,11 +28,16 @@ p "-" * 50
 ############################################
 patients_number = 15
 patients_count = 0
+nutritionists_number = 5
 nutritionists_count = 0
+appointments_number = 45
 appointments_count = 0
-logbooks_number = 10
+logbooks_number = 30
+logbookss_count = 0
 articles_number = 10
+articles_count = 0
 ############################################
+
 
 ############################################
 ###################### Create nutritionists
@@ -49,7 +54,8 @@ Nutritionist.create(
 nutritionists_count += 1
 system("clear")
 puts "#{nutritionists_count} nutritionists created"
-puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
+puts "|"+("█"*(nutritionists_count))+(" "*((nutritionists_number-nutritionists_count)))+"|"
+
 
 Nutritionist.create(
   first_name:"Emilie",
@@ -64,7 +70,8 @@ Nutritionist.create(
 nutritionists_count += 1
 system("clear")
 puts "#{nutritionists_count} nutritionists created"
-puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
+puts "|"+("█"*(nutritionists_count))+(" "*((nutritionists_number-nutritionists_count)))+"|"
+
 
 Nutritionist.create(
   first_name:"Estelle",
@@ -79,7 +86,8 @@ Nutritionist.create(
 nutritionists_count += 1
 system("clear")
 puts "#{nutritionists_count} nutritionists created"
-puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
+puts "|"+("█"*(nutritionists_count))+(" "*((nutritionists_number-nutritionists_count)))+"|"
+
 
 Nutritionist.create(
   first_name:"Martin",
@@ -94,13 +102,14 @@ Nutritionist.create(
 nutritionists_count += 1
 system("clear")
 puts "#{nutritionists_count} nutritionists created"
-puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
+puts "|"+("█"*(nutritionists_count))+(" "*((nutritionists_number-nutritionists_count)))+"|"
+
 
 Nutritionist.create(
   first_name:"Marie",
   last_name:"DeLaRue",
   phone_number:"0689984526",
-  slug_calendly:"https://calendly.com/martin-matin",
+  slug_calendly:"https://calendly.com/marie-delarue",
   avatar:'https://images.pexels.com/photos/4612249/pexels-photo-4612249.jpeg?cs=srgb&dl=pexels-anthony-shkraba-4612249.jpg&fm=jpg',
   email:"marie-delarue@yopmail.com",
   password:"azerty123",
@@ -109,94 +118,317 @@ Nutritionist.create(
 nutritionists_count += 1
 system("clear")
 puts "#{nutritionists_count} nutritionists created"
-puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
+puts "|"+("█"*(nutritionists_count))+(" "*((nutritionists_number-nutritionists_count)))+"|"
 ############################################
 
 ############################################
 ####################### Create patients
-patients_number.times do |i|
-  patients_count += 1
-  Patient.create(
-    first_name:Faker::Name.first_name,
-    last_name:Faker::Name.last_name,
-    date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
-    email:Faker::Internet.free_email,
-    password:"azerty123",
-    password_confirmation:"azerty123",
-    nutritionist_id:Nutritionist.all.sample.id,
-  )
-  system("clear")
-  puts "#{patients_count} patients created"
-  puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
-end
+Patient.create(
+  first_name:"Audrey",
+  last_name: "Gergo",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 2,
+  email: "audrey.gergo@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Antoine",
+  last_name: "Marquez",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "antoine.marquez@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Julia",
+  last_name: "Laroche",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 2,
+  email: "julia.laroche@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Marc",
+  last_name: "Despres",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "marc.despres@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Coralie",
+  last_name: "Chapuis",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 2,
+  email: "coralie.chapuis@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Amandine",
+  last_name: "Salvi",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 2,
+  email: "amandine.salvi@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Bastien",
+  last_name: "Arno",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "bastien.arno@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Alexandre",
+  last_name: "Bertin",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "alexandre.bertin@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Nicolas",
+  last_name: "Deschamp",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "nicolas.deschamp@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Melanie",
+  last_name: "Lano",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 2,
+  email: "melanie.lano@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Hugo",
+  last_name: "fournier",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "hugo.fournier@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Karen",
+  last_name: "Chan",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 2,
+  email: "karen.chan@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Allison",
+  last_name: "Pico",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 2,
+  email: "allison.pico@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Eric",
+  last_name: "Mayeul",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "eric.mayeul@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+
+
+Patient.create(
+  first_name:"Asim",
+  last_name: "Al-massati",
+  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  gender: 1,
+  email: "asim.almassati@yopmail.com",
+  password:"azerty123",
+  password_confirmation:"azerty123",
+  nutritionist_id:Nutritionist.all.sample.id,
+)
+patients_count += 1
+system("clear")
+puts "#{patients_count} patients created"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 ############################################
 
-############################################
-####################### Create appointments
-Patient.all.each do |patient|
+# ############################################
+# ####################### Create appointments
+# Patient.all.each do |patient|
   
-  Appointment.create(
-    patient_id:patient.id,
-    nutritionist_id:patient.nutritionist.id,
-    date:"22-07-2021 14:00",
-    content:Faker::Lorem.paragraph_by_chars(number: 500),
-    height:1.74,
-    weight:95,
-    body_fat:30,
-    visceral_fat:12,
-    muscle_mass:50
-  )
-  appointments_count +=1
-  system("clear")
-  puts "#{appointments_count} appointments created"
-  puts "|"+("█"*((appointments_count))+(" "*(45-appointments_count)+"|"))
+#   Appointment.create(
+#     patient_id:patient.id,
+#     nutritionist_id:patient.nutritionist.id,
+#     date:generate_randome_date(),
+#     content:Faker::Lorem.paragraph_by_chars(number: 500),
+#     height:1.74,
+#     weight:95,
+#     body_fat:30,
+#     visceral_fat:12,
+#     muscle_mass:50
+#   )
+#   appointments_count +=1
+#   system("clear")
+#   puts "#{appointments_count} appointments created"
+#   puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
   
-  Appointment.create(
-    patient_id:patient.id,
-    nutritionist_id:patient.nutritionist.id,
-    date:"27-08-2021 16:00",
-    content:Faker::Lorem.paragraph_by_chars(number: 500),
-    height:1.74,
-    weight:94,
-    body_fat:28,
-    visceral_fat:11,
-    muscle_mass:51
-  )
-  appointments_count +=1
-  system("clear")
-  puts "#{appointments_count} appointments created"
-  puts "|"+("█"*((appointments_count))+(" "*(45-appointments_count)+"|"))
+#   Appointment.create(
+#     patient_id:patient.id,
+#     nutritionist_id:patient.nutritionist.id,
+#     date: ,
+#     content:Faker::Lorem.paragraph_by_chars(number: 500),
+#     height:1.74,
+#     weight:94,
+#     body_fat:28,
+#     visceral_fat:11,
+#     muscle_mass:51
+#   )
+#   appointments_count +=1
+#   system("clear")
+#   puts "#{appointments_count} appointments created"
+#   puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
   
-  Appointment.create(
-    patient_id:patient.id,
-    nutritionist_id:patient.nutritionist.id,
-    date:"19-09-2021 09:00",
-    content:Faker::Lorem.paragraph_by_chars(number: 500),
-    height:1.74,
-    weight:90,
-    body_fat:24,
-    visceral_fat:10,
-    muscle_mass:53
-  )
-  appointments_count +=1
-  system("clear")
-  puts "#{appointments_count} appointments created"
-  puts "|"+("█"*((appointments_count))+(" "*(45-appointments_count)+"|"))
-end
-############################################
+#   Appointment.create(
+#     patient_id:patient.id,
+#     nutritionist_id:patient.nutritionist.id,
+#     date: generate_randome_date(),
+#     content:Faker::Lorem.paragraph_by_chars(number: 500),
+#     height:1.74,
+#     weight:90,
+#     body_fat:24,
+#     visceral_fat:10,
+#     muscle_mass:53
+#   )
+#   appointments_count +=1
+#   system("clear")
+#   puts "#{appointments_count} appointments created"
+#   puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+# end
+# ############################################
 
 ############################################
 ####################### Create logbooks
-logbooks_number.times do |i|
-  Logbook.create(
-    patient_id: Patient.all.sample.id,
-    title: Faker::Lorem.question(word_count: 20),
-    content: Faker::Lorem.paragraph(sentence_count: 15),
-  )
-  system("clear")
-  puts "#{i+1} logbooks created"
-  puts "|"+("█"*((i+1)/2))+(" "*(((logbooks_number-1)-i)/2))+"|"
-end
+Logbook.create(
+  patient_id: 1,
+  title: Faker::Lorem.question(word_count: 20),
+  content: Faker::Lorem.paragraph(sentence_count: 15),
+  
+)
+system("clear")
+puts "#{logbooks_count+1} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
 ############################################
 
 ############################################
