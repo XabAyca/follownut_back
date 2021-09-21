@@ -53,7 +53,7 @@ class Api::V1::LogbooksController < Api::BaseController
   
     def is_author
       if @logbook.patient != current_patient
-        render json: {error:"Non authorisé"}, status: :unauthorized
+        render json: {error:"Non autorisé"}, status: :unauthorized
       end
     end
 

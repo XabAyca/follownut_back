@@ -36,7 +36,7 @@ class Api::V1::PatientsController < Api::BaseController
 
   def is_admin
     if current_patient != @patient
-      render json: {error:"Non authorisé"}
+      render json: {error:"Non autorisé"}
     end
   end
 

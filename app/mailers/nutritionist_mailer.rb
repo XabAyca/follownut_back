@@ -13,7 +13,7 @@ class NutritionistMailer < ApplicationMailer
   end
 
   def goodbye_email(nutritionist)
-    @nutritionist = nutritionist 
+    @nutritionist = nutritionist
     @url  = 'https://follownut.herokuapp.com/' 
     mail(to: @nutritionist.email, subject: "Ce n'est qu'un au revoir") 
   end
