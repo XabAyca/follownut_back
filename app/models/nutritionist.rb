@@ -17,9 +17,15 @@ class Nutritionist < ApplicationRecord
 
   ## Methods
   after_create :welcome_send
+  before_destroy :goodbye_send, prepend: true
+
 
   def welcome_send
     NutritionistMailer.welcome_email(self).deliver_now
+  end
+
+  def goodbye_send
+    NutritionistMailer.goodbye_email(self).deliver_now
   end
 
   def generate_password_token!

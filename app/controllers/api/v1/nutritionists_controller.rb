@@ -1,7 +1,7 @@
 class Api::V1::NutritionistsController < Api::BaseController
 
   before_action :find_nutritionist, only: %w[show update is_admin destroy]
-  before_action :is_admin, only: %i[update destroy]
+  # before_action :is_admin, only: %i[update destroy]
 
   def show
     render json: @nutritionist, include: :patients
@@ -36,7 +36,7 @@ class Api::V1::NutritionistsController < Api::BaseController
 
   def is_admin
     if current_nutritionist != @nutritionist
-      render json: {error:"Non authorisé"}
+      render json: {error:"Non autorisé"}
     end
   end
 

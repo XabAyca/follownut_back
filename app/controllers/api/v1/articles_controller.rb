@@ -54,7 +54,7 @@ class Api::V1::ArticlesController < Api::BaseController
   
     def is_author
       if @article.nutritionist != current_nutritionist
-        render json: {error:"Non authorisé"}, status: :unauthorized
+        render json: {error:"Non autorisé"}, status: :unauthorized
       end
     end
 
