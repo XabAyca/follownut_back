@@ -27,8 +27,9 @@ p "-" * 50
 
 ############################################
 patients_number = 15
-nutritionists_number = 0
-appointments_number = 20
+patients_count = 0
+nutritionists_count = 0
+appointments_count = 0
 logbooks_number = 10
 articles_number = 10
 ############################################
@@ -46,10 +47,10 @@ Nutritionist.create(
   password:"azerty123",
   password_confirmation:"azerty123",
 )
-nutritionists_number += 1
+nutritionists_count += 1
 system("clear")
-puts "#{nutritionists_number} nutritionists created"
-puts "|"+("█"*(nutritionists_number))+(" "*((5-nutritionists_number)))+"|"
+puts "#{nutritionists_count} nutritionists created"
+puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
 
 Nutritionist.create(
   first_name:"Emilie",
@@ -62,10 +63,10 @@ Nutritionist.create(
   password:"azerty123",
   password_confirmation:"azerty123",
 )
-nutritionists_number += 1
+nutritionists_count += 1
 system("clear")
-puts "#{nutritionists_number} nutritionists created"
-puts "|"+("█"*(nutritionists_number))+(" "*((5-nutritionists_number)))+"|"
+puts "#{nutritionists_count} nutritionists created"
+puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
 
 Nutritionist.create(
   first_name:"Estelle",
@@ -78,10 +79,10 @@ Nutritionist.create(
   password:"azerty123",
   password_confirmation:"azerty123",
 )
-nutritionists_number += 1
+nutritionists_count += 1
 system("clear")
-puts "#{nutritionists_number} nutritionists created"
-puts "|"+("█"*(nutritionists_number))+(" "*((5-nutritionists_number)))+"|"
+puts "#{nutritionists_count} nutritionists created"
+puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
 
 Nutritionist.create(
   first_name:"Martin",
@@ -94,10 +95,10 @@ Nutritionist.create(
   password:"azerty123",
   password_confirmation:"azerty123",
 )
-nutritionists_number += 1
+nutritionists_count += 1
 system("clear")
-puts "#{nutritionists_number} nutritionists created"
-puts "|"+("█"*(nutritionists_number))+(" "*((5-nutritionists_number)))+"|"
+puts "#{nutritionists_count} nutritionists created"
+puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
 
 Nutritionist.create(
   first_name:"Marie",
@@ -110,15 +111,16 @@ Nutritionist.create(
   password:"azerty123",
   password_confirmation:"azerty123",
 )
-nutritionists_number += 1
+nutritionists_count += 1
 system("clear")
-puts "#{nutritionists_number} nutritionists created"
-puts "|"+("█"*(nutritionists_number))+(" "*((5-nutritionists_number)))+"|"
+puts "#{nutritionists_count} nutritionists created"
+puts "|"+("█"*(nutritionists_count))+(" "*((5-nutritionists_count)))+"|"
 ############################################
 
 ############################################
 ####################### Create patients
 patients_number.times do |i|
+  patients_count += 1
   Patient.create(
     first_name:Faker::Name.first_name,
     last_name:Faker::Name.last_name,
@@ -129,29 +131,62 @@ patients_number.times do |i|
     nutritionist_id:Nutritionist.all.sample.id,
   )
   system("clear")
-  puts "#{i+1} patients created"
-  puts "|"+("█"*(i+1))+(" "*((patients_number-1)-i))+"|"
+  puts "#{patients_count} patients created"
+  puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 end
 ############################################
 
 ############################################
 ####################### Create appointments
-appointments_number.times do |i|
-  patient = Patient.all.sample
+Patient.all.each do |patient|
+  
   Appointment.create(
     patient_id:patient.id,
     nutritionist_id:patient.nutritionist.id,
-    date:Faker::Date.between(from: 1.year.ago, to: Date.today),
+    date:"22-07-2021 14:00",
     content:Faker::Lorem.paragraph_by_chars(number: 500),
-    height:rand(1.5...1.9),
-    weight:rand(45...100),
-    body_fat:rand(10...35),
-    visceral_fat:rand(10...35),
-    muscle_mass:rand(40...60)
+    height:1.74,
+    weight:95,
+    body_fat:30,
+    visceral_fat:12,
+    muscle_mass:50
   )
+  appointments_count +=1
   system("clear")
-  puts "#{i+1} appointments created"
-  puts "|"+("█"*((i+1)/2))+(" "*(((appointments_number-1)-i)/2))+"|"
+  puts "#{appointments_count} appointments created"
+  puts "|"+("█"*((appointments_count))+(" "*(45-appointments_count)+"|"))
+  
+  Appointment.create(
+    patient_id:patient.id,
+    nutritionist_id:patient.nutritionist.id,
+    date:"27-08-2021 16:00",
+    content:Faker::Lorem.paragraph_by_chars(number: 500),
+    height:1.74,
+    weight:94,
+    body_fat:28,
+    visceral_fat:11,
+    muscle_mass:51
+  )
+  appointments_count +=1
+  system("clear")
+  puts "#{appointments_count} appointments created"
+  puts "|"+("█"*((appointments_count))+(" "*(45-appointments_count)+"|"))
+  
+  Appointment.create(
+    patient_id:patient.id,
+    nutritionist_id:patient.nutritionist.id,
+    date:"19-09-2021 09:00",
+    content:Faker::Lorem.paragraph_by_chars(number: 500),
+    height:1.74,
+    weight:90,
+    body_fat:24,
+    visceral_fat:10,
+    muscle_mass:53
+  )
+  appointments_count +=1
+  system("clear")
+  puts "#{appointments_count} appointments created"
+  puts "|"+("█"*((appointments_count))+(" "*(45-appointments_count)+"|"))
 end
 ############################################
 
