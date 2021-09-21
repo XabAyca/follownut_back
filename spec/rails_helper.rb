@@ -68,5 +68,6 @@ RSpec.configure do |config|
   config.include NutritionistHelpers
   config.include LogbooksHelpers
   config.include JSONAPI::RSpec
+  config.jsonapi_indifferent_hash = true
   config.include ApiHelpers
 end

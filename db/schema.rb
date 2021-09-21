@@ -69,8 +69,6 @@ ActiveRecord::Schema.define(version: 2021_09_18_011054) do
   create_table "patients", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "gender", default: 0
-    t.date "date_of_birth"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
