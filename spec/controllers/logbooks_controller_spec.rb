@@ -20,7 +20,7 @@ describe Api::V1::LogbooksController, type: :request do
     it "return all logbooks" do
       get "/api/v1/logbooks/#{Logbook.all.sample.id}"
       expect(response).to have_http_status(:success)
-      expect(JSON.parse(response.body).size).to eq(7)
+      expect(JSON.parse(response.body).size).to eq(8)
     end
   end
 
@@ -77,7 +77,7 @@ describe Api::V1::LogbooksController, type: :request do
     end
   end
 
-  context 'When DELETE an logbook' do
+  context 'When DELETE a logbook' do
     before do
       create_patient()
       create_logbooks()

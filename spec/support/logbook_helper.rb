@@ -12,4 +12,15 @@ module LogbooksHelpers
     )
   end
 
+  def build_logbooks
+    FactoryBot.build(:logbook,
+      patient_id:Patient.all.sample.id,
+      title:"title",
+      content:"blablabla",
+      is_shared: true
+    )
+  end
+
+
+
 end

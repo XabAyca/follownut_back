@@ -4,15 +4,24 @@ p " " * 50
 p "                 STARTING SEEDING                 "
 p " " * 50
 p "*" * 50
+
 p "Destroy curent data..."
+
 p "Destroying Patients... #{Patient.count} "
 Patient.destroy_all
+
 p "Destroying Nutritionists... #{Nutritionist.count} "
 Nutritionist.destroy_all
+
 p "Destroying Appointments... #{Appointment.count} "
 Appointment.destroy_all
+
 p "Destroying Logbooks... #{Logbook.count} "
 Logbook.destroy_all
+
+p "Destroying Articles... #{Article.count} "
+Article.destroy_all
+
 p "-" * 50
 p "-" * 50
 
@@ -21,6 +30,7 @@ patients_number = 15
 nutritionists_number = 5
 appointments_number = 20
 logbooks_number = 10
+articles_number = 10
 ############################################
 
 # Create nutritionists
@@ -86,6 +96,18 @@ logbooks_number.times do |i|
   system("clear")
   puts "#{i+1} logbooks created"
   puts "|"+("█"*((i+1)/2))+(" "*(((logbooks_number-1)-i)/2))+"|"
+end
+
+# Create articles
+articles_number.times do |i|
+  Article.create(
+    title: Faker::Lorem.question(word_count: 20),
+    content: Faker::Lorem.paragraph(sentence_count: 15),
+    nutritionist_id: Nutritionist.all.sample.id,
+  )
+  system("clear")
+  puts "#{i+1} articles created"
+  puts "|"+("█"*((i+1)/2))+(" "*(((articles_number-1)-i)/2))+"|"
 end
 
 puts ""
