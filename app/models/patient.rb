@@ -40,10 +40,6 @@ class Patient < ApplicationRecord
     save!
   end
 
-  def age
-    ((Date.today - date_of_birth) / 365).to_i
-  end
-
   private
 
   def generate_token

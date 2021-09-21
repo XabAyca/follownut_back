@@ -78,8 +78,7 @@ appointments_number.times do |i|
     weight:rand(45...100),
     body_fat:rand(10...35),
     visceral_fat:rand(10...35),
-    muscle_mass:rand(40...60),
-    BMI:rand(20...30),
+    muscle_mass:rand(40...60)
   )
   system("clear")
   puts "#{i+1} appointments created"

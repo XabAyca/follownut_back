@@ -14,10 +14,16 @@ class Appointment < ApplicationRecord
   belongs_to :nutritionist
 
   ## Methods
+  before_save :bmi_calc
   after_create :new_appointment
+
 
   def new_appointment
     AppointmentMailer.new_appointment_email(self).deliver_now
+  end
+
+  def bmi_calc
+    self.BMI = self.weight.to_f / (self.height.to_f * self.height.to_f)
   end
 
 end

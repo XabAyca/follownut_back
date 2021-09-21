@@ -6,15 +6,11 @@ class Api::V1::AppointmentsController < Api::BaseController
 
   def create
     @appointment = Appointment.new(appointment_params())
-    @appointment.nutritionist = current_nutritionist
-    @appointment.BMI = @appointment.weight.to_f / (@appointment.height.to_f * @appointment.height.to_f)
-
     if @appointment.save 
       render json: @appointment, status: :created
     else 
       render json: @appointment.errors, status: :bad_request
     end
-
   end
 
   def show
