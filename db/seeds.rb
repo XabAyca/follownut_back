@@ -718,7 +718,60 @@ puts "|"+("█"*articles_count)+(" "*(articles_number-articles_count))+"|"
 
 Article.create(
   nutritionist_id: 4,
-  title: "",
+  title: "L'ail, un superaliment bien de chez nous",
+  content: "Bien connu de tous, l'ail est un condiment très facile à trouver dans nos contrées. Cette plante vivace au doux nom de Allium sativum fait partie de la même famille que l'oignon, l'échalotte, le poireau ou encore l'asperge. \n
+            Une autre facette de l'ail est qu'il est considéré comme une plante médicinale depuis des temps immémoriaux. La somme de ses propriétés le classe sans équivoque dans la prestigieuse catégorie des super-aliments. \n \n
+            Les vertus de l'ail \n
+            Tout d'abord, l'ail se distingue par sa richesse en micronutriments, notamment en vitamines B6 et C, manganèse, sélenium, germanium, calcium et phosphore. Certains oligoéléments comme le sélenium ou le germanium sont relativement rares, ce qui fait de l'ail une source particulièrement intéressante sur le plan nutritionnel. \n \n
+            L'ail contient des huiles essentielles et des composés souffrés aux propriétés execeptionnelles. L'allicine notamment, libérée lorsque les gousses sont écrasées ou hachées, se trouve être aussi la molécule responsable de l'odeur distinctive de l'ail. \n \n
+            Les antioxydants de l'ail \n
+            Riche en polyphénols, qui sont de puissants antioxydants, l'ail permet de lutter efficacement contre le stress oxydatif. L'ailline possède l'intéressantes propriété de capter le radical libre hydroxyle. \n \n
+            Ail et microbiote \n
+            L'ail contient de l'inuline, un prébiotique qui stimule le développement de bactéries bénéfiques du microbiote. Il aide ainsi à maintenir la bonne constitution et la bonne santé de la flore intestinale. \n \n
+            Un médicament naturel et proactif \n
+            Antibactérien, antiviral, antiseptique et antifongique, l'ail renforce le système immunitaire et se montre efficace pour lutter contre les maladies, notamment celles rencontrées communément en hiver comme le rhume ou la grippe. \n \n
+            Les propriétés anti-cancer de l'ail \n
+            Une analyse statistique basée sur cinq études1,2,3,4,5 met en évidence que la consommation quotidienne d'une gousse d'ail permet de réduire de moitié le risque de cancer du colon, de l'estomac et du rectum. D'autres formes de cancer, comme celui du cerveau ou de la gorge, pourraient être également favorablement impactés. \n \n
+            L'ail et le système cardiovasculaire \n
+            L'ail permet de réguler le cholestérol et les triglycérides sanguins. Il aide également à lutter contre l'hypertension artérielle, et par voie de conséquence contre les maladies cardiovasculaires. Par ailleurs, les propriétés anticoagulantes de l'ail fluidifient le sang, ce qui réduit le risque de trombose. \n \n
+            L'ultime protection \n
+            Un dernier avantage, à l'utilité plus marginale : l'ail est bien connu pour éloigner les vampires. Il est de notoriété publique que tous ceux qui suspendent des gousses dans leur maison ne sont pas souvent embêtés par les suceurs de sang ! \n \n
+            Quelques inconvénients \n
+            L'inconvénient qui vient immédiatement à l'esprit au sujet de l'ail est bien sûr l'haleine conférée par ses composés souffrés. Cette odeur est toutefois assez facile à maitriser : manger une pomme se montre rapidement efficace. Il est aussi possible de croquer quelques clous de girofle ou quelques grains de café torréfié. Une tasse de thé vert après le repas est une autre alternative. \n \n
+            Un autre inconvénient, plus embêtant, est lié aux propriétés anticoagulantes de l'ail. Elles présentent un risque de saignements lorsque l'ail est associé à des médicaments antiagrégants plaquettaires. Il est aussi déconseillé de consommer de l'ail avant une opération chirurgicale. \n \n
+            Comment consommer l'ail \n
+            En raison de ses nombreuses vertus, de sa facilité d'utilisation et de sa grande disponiblité, l'ail peut être consommé quotidiennement à raison de quelques gousses par jour. L'idéal est de manger l'ail cru dégermé, une quinzaine de minutes après l'avoir écrasé ou haché. Ce petit temps de repos permet de favoriser l'action de l'enzyme aillinase. \n
+            Pour celles et ceux qui n'apprécieraient pas le goût prononcé de l'ail, une alternative existe sous la forme de gélules. Ces dernières permettent de profiter des bienfaits de l'ail sans le goût, et sans désagrément en terme d'haleine.",
+  )
+articles_count += 1
+system("clear")
+puts "#{articles_count} articles created"
+puts "|"+("█"*articles_count)+(" "*(articles_number-articles_count))+"|"
+
+
+Article.create(
+  nutritionist_id: 5,
+  title: "A la découverte du cerfeuil tubéreux",
+  content: "Depuis quelques temps, les légumes anciens réapparaissent sur les étals. Panais, patisson, tobinambour ou encore rutabaga s'invitent à nouveau sur nos tables. Ces légumes, longtemps boudés, ont eu la chance de passer sous le radar de l'industrie et d'être épargnés par les ravages des OGM et de l'agriculture intensive. \n
+            Parmi eux, on trouve un tubercule encore assez peu connu : le cerfeuil tubéreux. Ce cousin de la carotte et du celeri se trouve être particulièrement intéressant sur le plan gustatif, et il ne fait aucun doute qu'il constituera pour beaucoup une belle découverte ! \n \n
+            Chaerophyllum bulbosum \n
+            Le cerfeuil tubéreux, aussi appelé cerfeuil bulbeux, cerfeuil à bulbe ou chérophylle bulbeux, est une plante herbacée bisannuelle vivace originaire d'Europe centrale. Seule sa racine est commestible, les feuilles étant toxiques. Les tubercules présentent une forme cônique d'environ cinq centimètres de long et trois de large. Le cerfeuil tubéreux est malheureusement assez rare et onéreux, en raison d'une très faible productivité. \n \n
+            Valeurs nutritionnelles du cerfeuil tubéreux \n
+            Au moment où j'écris ces lignes, les études sur la composition nutritionnelle du cerfeuil tubéreux ne sont pas terminées. Il est donc impossible de fournir des données complètes et fiables à ce sujet. \n
+            Cependant, des travaux de recherche ont été menés au sujet de la composition en glucides de ce tubercule1. Il apparait que la teneur en amidon est très élevée lors de la récolte, avec 37% de masse sèche dont 76% d'amidon. Le cerfeuil tubéreux est conservé pendant deux mois au froid avant consommation, ce qui conduit à une modification partielle de sa composition en glucides. Au final, la matière sèche est composée à 35% d'amidon et à 25% de saccharose. On peut en déduire que le cerfeuil tubéreux, une fois apte à la consommation, contient environ 22,2g de glucides pour 100g, dont 9,3g de sucre. \n \n
+            Comment préparer le cerfeuil tubéreux \n
+            Le cerfeuil tubéreux offre une déliceuse et subtile saveur légèrement sucrée, à mi-chemin entre la pomme de terre et la chataigne. Le tubercule se consomme comme un légume, cru ou cuit. \n
+            Cru, il se prépare comme la carotte. Cuit, on préfèrera une cuisson modérée pour garder un peu de fermeté et pour éviter que la chair ne devienne farineuse. Un temps de cuisson de cinq à huit minutes, à la vapeur (toujours préférable) ou dans de l'eau bouillonnante salée, est suffisant.",
+  )
+articles_count += 1
+system("clear")
+puts "#{articles_count} articles created"
+puts "|"+("█"*articles_count)+(" "*(articles_number-articles_count))+"|"
+
+
+Article.create(
+  nutritionist_id: 5,
+  title: "A la découverte du cerfeuil tubéreux",
   content: "",
   )
 articles_count += 1
