@@ -33,7 +33,7 @@ nutritionists_count = 0
 appointments_number = 45
 appointments_count = 0
 logbooks_number = 30
-logbookss_count = 0
+logbooks_count = 0
 articles_number = 10
 articles_count = 0
 ############################################
