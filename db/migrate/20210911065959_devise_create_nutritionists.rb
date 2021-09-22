@@ -9,7 +9,6 @@ class DeviseCreateNutritionists < ActiveRecord::Migration[6.1]
       t.string :phone_number
       t.string :avatar
       t.string :slug_calendly
-      t.string :api_key
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 

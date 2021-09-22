@@ -31,7 +31,7 @@ class Api::V1::NutritionistsController < Api::BaseController
   end
 
   def nutritionist_params
-    params.require(:nutritionist).permit(:first_name, :last_name, :avatar, :phone_number,:slug_calendly, :api_key, :email, :password, :password_confirmation)
+    params.require(:nutritionist).permit(:first_name, :last_name, :avatar, :phone_number,:slug_calendly, :email, :password, :password_confirmation)
   end
 
   def is_admin

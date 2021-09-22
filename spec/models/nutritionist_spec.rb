@@ -27,17 +27,6 @@ RSpec.describe Nutritionist, type: :model do
     expect(nutritionist2).to be_valid
   end
 
-  it "is valid without api_key" do
-    nutritionist2 = FactoryBot.build(:nutritionist, api_key: nil)
-    expect(nutritionist2).to be_valid
-  end
-
-  it "is not valid with existing api_key" do
-    nutritionist = FactoryBot.create(:nutritionist)
-    nutritionist2 = FactoryBot.build(:nutritionist, api_key: "LHCEDBKOUYNDAX5PV5SFGY3OB3TUPGCF")
-    expect(nutritionist2).to_not be_valid
-  end
-
   it "is valid without slug_calendly" do
     nutritionist2 = FactoryBot.build(:nutritionist, slug_calendly: nil)
     expect(nutritionist2).to be_valid
@@ -71,19 +60,13 @@ RSpec.describe Nutritionist, type: :model do
 
   it "is not valid with existing email" do
     nutritionist = FactoryBot.create(:nutritionist)
-    nutritionist2 = FactoryBot.build(:nutritionist, api_key: 'abcde',slug_calendly: "https://calendly.com/dina")
+    nutritionist2 = FactoryBot.build(:nutritionist, slug_calendly: "https://calendly.com/dina")
     expect(nutritionist2).to be_invalid
-  end
-
-  it "is not valid with existing api key" do
-    nutritionist = FactoryBot.create(:nutritionist )
-    nutritionist2 = FactoryBot.build(:nutritionist,email: 'abcde@ab.fr',slug_calendly: "https://calendly.com/dina")
-    expect(nutritionist2).to_not be_valid
   end
 
   it "is not valid with existing slug calendly" do
     nutritionist = FactoryBot.create(:nutritionist )
-    nutritionist2 = FactoryBot.build(:nutritionist, email: 'abcde@ab.fr',api_key: 'abcde')
+    nutritionist2 = FactoryBot.build(:nutritionist, email: 'abcde@ab.fr')
     expect(nutritionist2).to_not be_valid
   end
 end

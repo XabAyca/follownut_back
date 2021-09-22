@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 2021_09_18_110416) do
     t.string "phone_number"
     t.string "avatar"
     t.string "slug_calendly"
-    t.string "api_key"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
