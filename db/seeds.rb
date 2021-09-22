@@ -771,8 +771,21 @@ puts "|"+("█"*articles_count)+(" "*(articles_number-articles_count))+"|"
 
 Article.create(
   nutritionist_id: 5,
-  title: "A la découverte du cerfeuil tubéreux",
-  content: "",
+  title: "Les mécanismes d'action de l'insuline",
+  content: "L'insuline est une hormone produite par les cellules bêta des îlots de Langerhans du pancréas. Sa sécrétion est principalement conditionnée par le glucose sanguin, qui pénètre dans les cellules bêta et déclenche la libération de l'insuline dans le sang. La quantité d'insuline délivrée dépend de la glycémie. Les acides aminés, les acides gras et les corps cétoniques stimulent également la sécrétion d'insuline, dans une moindre mesure. \n \n
+            Le rôle de l'insuline sur le foie \n
+            L'insuline est libérée au niveau de la veine pancréatico-duodénale. Elle arrive au foie, où elle sera captée pour près de 50 %. Les cellules cibles du foie, les hépatocytes, réagissent à l'insuline au moyen de récepteurs extracellulaires. En effet, l'insuline ne pénètre pas dans les cellules. Lorsqu'ils sont stimulés, ces récepteurs génèrent des messagers secondaires à l'intérieur des cellules, qui activent les voies de transport du glucose ainsi que les enzymes nécessaires à son stockage. \n
+            Le glucose pénètre dans les hépatocytes et y est agrégé au niveau du cytosol, sous forme de glycogène, par réactions enzymatiques : c'est la glycogénogenèse. Le glycogène est un polymère très ramifié du glucose : une molécule de glycogène peut contenir jusqu'à 50000 molécules de glucose, liées entre elles par liaison glycosidique alpha 1,4 et alpha 1,6. L'utilisation du glucose par les hépatocytes, qui constituent de cette manière un stock énergétique conséquent, abaisse la glycémie. \n
+            Ce stock pourra être libéré ultérieurement pour augmenter la glycémie, à la demande du pancréas par l'intermédiaire du glucagon. Cette hormone, antagoniste à l'insuline, commande la glycogénolyse qui, au contraire de la glycogénogenèse, casse le glycogène en glucose et le libère dans le sang par diffusion facilité. Le mécanisme de glycogénolyse est inhibé en présence d'insuline. \n \n
+            Muscles et insuline \n
+            Après avoir atteint le foie, l'insuline restante est diffusée dans tout l'organisme par la circulation sanguine. Au niveau des muscles squelettiques, les myocytes réagissent à l'insuline d'une manière très similaire aux hépatocytes. Le glucose présent dans le sang pénètre dans les myocytes et y est stocké sous forme de glycogène, où il constitue une réserve locale d'énergie destinée à l'activité du muscle. Cependant, à l'inverse des hépatocytes, les myocytes ne réagissent pas au glucagon et ne peuvent pas libérer le glycogène dans le sang. \n \n
+            Insuline et stockage sous forme de graisse corporelle \n
+            Les adipocytes du tissus adipeux sont également sensibles à l'insuline, qui y stimule la lipogenèse. Le glucose y pénètre pour être converti en triglycérides, qui constituent un stock d'énergie sous forme de graisse corporelle. L'insuline inhibe la lipolyse, mécanisme qui permet aux adipocytes de libérer les triglycérides stockés sous forme d'acides gras non estérifiés. \n \n
+            Rôle de l'insuline dans le métabolisme des protéines \n
+            L'insuline joue aussi un rôle important dans le métabolisme des protéines. Elle favorise la pénétration des acides aminés dans les tissus, ainsi que leur utilisation par les cellules pour former leurs propres protéines (protéosynthèse). L'insuline inhibe également la conversion des acides aminés en glucose (néoglucogenèse), et favorise donc la conservation des protéines en présence d'autres sources énergétiques. \n \n
+            Insuline, cerveau et impact sur le comportement \n
+            Des études suggèrent que, outre son action hypoglycémiante et anabolisante, l'insuline pourrait agir également sur l'hypothalamus. Ce dernier, situé dans le cerveau, est en charge de nombreux processus de régulation au niveau nerveux, endocrinien et comportemental. Il a été montré que l'insuline, auparavant considérée comme inactive sur le système nerveux central, traverse la barrière hématoencéphalique par transport actif. \n
+            Ce mécanisme laisse légitimement supposer que l'insuline est utilisée au niveau cérébral. Les travaux de Bruning mettent en effet en évidence, chez la souris, l'implication de l'insuline dans le contrôle du poids et de la fonction reproductive. L'insuline, conjointement avec la leptine, semble agir sur l'hypothalamus au niveau neuronal. Ces mécanismes neuronaux et endocriniens sont toutefois encore mal compris. ",
   )
 articles_count += 1
 system("clear")
