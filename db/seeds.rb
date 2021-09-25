@@ -363,59 +363,499 @@ puts "#{patients_count} patients created"
 puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 ############################################
 
-# ############################################
-# ####################### Create appointments
-# Patient.all.each do |patient|
-  
-#   Appointment.create(
-#     patient_id:patient.id,
-#     nutritionist_id:patient.nutritionist.id,
-#     date:generate_randome_date(),
-#     content:Faker::Lorem.paragraph_by_chars(number: 500),
-#     height:1.74,
-#     weight:95,
-#     body_fat:30,
-#     visceral_fat:12,
-#     muscle_mass:50
-#   )
-#   appointments_count +=1
-#   system("clear")
-#   puts "#{appointments_count} appointments created"
-#   puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
-  
-#   Appointment.create(
-#     patient_id:patient.id,
-#     nutritionist_id:patient.nutritionist.id,
-#     date: ,
-#     content:Faker::Lorem.paragraph_by_chars(number: 500),
-#     height:1.74,
-#     weight:94,
-#     body_fat:28,
-#     visceral_fat:11,
-#     muscle_mass:51
-#   )
-#   appointments_count +=1
-#   system("clear")
-#   puts "#{appointments_count} appointments created"
-#   puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
-  
-#   Appointment.create(
-#     patient_id:patient.id,
-#     nutritionist_id:patient.nutritionist.id,
-#     date: generate_randome_date(),
-#     content:Faker::Lorem.paragraph_by_chars(number: 500),
-#     height:1.74,
-#     weight:90,
-#     body_fat:24,
-#     visceral_fat:10,
-#     muscle_mass:53
-#   )
-#   appointments_count +=1
-#   system("clear")
-#   puts "#{appointments_count} appointments created"
-#   puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
-# end
-# ############################################
+############################################
+####################### Create appointments
+patient = Patient.find(1) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/05/2021 14:00",
+  content:"Premier rendez-vous : mise en place d'un règime hypo calorique pour perte de poids rapide",
+  height:1.74,
+  weight:95,
+  body_fat:30,
+  visceral_fat:12,
+  muscle_mass:50
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/06/2021 16:00",
+  content:"La perte de poids a été bien entamé. La patient suit correctement le plan alimentaire. Il parait satisfait et supporte bien les consignes. Pas de soucis à signaler.",
+  height:1.74,
+  weight:94,
+  body_fat:28,
+  visceral_fat:11,
+  muscle_mass:51
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/07/2021 10:00",
+  content:"Grosse perte de poids sur ce mois. La patient est très satisfait. Nous avons décidé d'entamer la seconde partie avec la phase de stabilisation. Mise en place d'un nouveau plan alimentaire avec réintroduction progressive des aliments légèrement sucré?",
+  height:1.74,
+  weight:90,
+  body_fat:24,
+  visceral_fat:10,
+  muscle_mass:53
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(2) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : mise en place d'un plan alimentaire HP pour sportif",
+  height:1.83,
+  weight:80,
+  body_fat:20,
+  visceral_fat:10,
+  muscle_mass:50
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"Le patient supporte bien son nouveau plan alimentaire. La prise de masse musculaire commence. Il semble moins fatigué et plus performant. On continue.",
+  height:1.83,
+  weight:82,
+  body_fat:19,
+  visceral_fat:9,
+  muscle_mass:51
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"Très satisfait, les performances du patient ont explosé. Celui-ci veut continuer, il est ravis. Seul bémol quelques gazs. On revoit légèrement l'apport en protéine.",
+  height:1.83,
+  weight:82,
+  body_fat:19,
+  visceral_fat:10,
+  muscle_mass:53
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(3) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : mise en place d'un régime drastique",
+  height:1.60,
+  weight:95,
+  body_fat:30,
+  visceral_fat:15,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"Le patient supporte mal son régime restrictif. Il a faim et grignotte souvent. Je lui ai expliqué l'importance d'être sérieux sur ce plan alimentaire pour sa santé (cardiaque, obésité morbide, ...)",
+  height:1.60,
+  weight:92,
+  body_fat:29,
+  visceral_fat:14,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"Dernier RDV. Le patient ne veut plus continuer le suivi malgré la perte de poids entamée.",
+  height:1.60,
+  weight:89,
+  body_fat:28,
+  visceral_fat:13,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(4) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : changement alimentaire. La patient souhaite devenir végétarien. Explication des besoins et comment s'y préparer",
+  height:1.76,
+  weight:69,
+  body_fat:22,
+  visceral_fat:11,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"La patient supporte plutôt bien son nouveau régime àlimentaire. On passe à l'étape 2 : présentation des recettes et les aliments inconnus. Passé du lat préparé au fait maison.",
+  height:1.76,
+  weight:68,
+  body_fat:22,
+  visceral_fat:11,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"La ptient a été très réceptif, ravie de ce changement et à l'aise dans ses nouvelles habitudes. Prochain RDV dans 6 mois pour évaluer l'évolution du ses besoins",
+  height:1.76,
+  weight:69,
+  body_fat:22,
+  visceral_fat:11,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(5) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : Patient atteint de TCA. Gros travail à faire sur l'limentation en général. Poids beaucoup trop bas, si aucune évolution une hospitalisation sera nécessaire",
+  height:1.76,
+  weight:50,
+  body_fat:14,
+  visceral_fat:8,
+  muscle_mass:30
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"Le patient a du mal à suivre son plan alimentaire et ment sur ce qu'il mange. Je lui propose de rencontrer un psy pour l'aider dans sa démarche.",
+  height:1.76,
+  weight:52,
+  body_fat:15,
+  visceral_fat:8,
+  muscle_mass:30
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"Le patient a fait les démarches nécessaire et évolue lentement. Je lui demande de controler régulièrement ses constantes. En cas de chute sous les 45 kg on l'hospitalise.",
+  height:1.76,
+  weight:53,
+  body_fat:15,
+  visceral_fat:8,
+  muscle_mass:30
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(11) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/05/2021 14:00",
+  content:"Premier rendez-vous : mise en place d'un règime hypo calorique pour perte de poids rapide",
+  height:1.74,
+  weight:95,
+  body_fat:30,
+  visceral_fat:12,
+  muscle_mass:50
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/06/2021 16:00",
+  content:"La perte de poids a été bien entamé. La patient suit correctement le plan alimentaire. Il parait satisfait et supporte bien les consignes. Pas de soucis à signaler.",
+  height:1.74,
+  weight:94,
+  body_fat:28,
+  visceral_fat:11,
+  muscle_mass:51
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/07/2021 10:00",
+  content:"Grosse perte de poids sur ce mois. La patient est très satisfait. Nous avons décidé d'entamer la seconde partie avec la phase de stabilisation. Mise en place d'un nouveau plan alimentaire avec réintroduction progressive des aliments légèrement sucré?",
+  height:1.74,
+  weight:90,
+  body_fat:24,
+  visceral_fat:10,
+  muscle_mass:53
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(12) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : mise en place d'un plan alimentaire HP pour sportif",
+  height:1.83,
+  weight:80,
+  body_fat:20,
+  visceral_fat:10,
+  muscle_mass:50
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"Le patient supporte bien son nouveau plan alimentaire. La prise de masse musculaire commence. Il semble moins fatigué et plus performant. On continue.",
+  height:1.83,
+  weight:82,
+  body_fat:19,
+  visceral_fat:9,
+  muscle_mass:51
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"Très satisfait, les performances du patient ont explosé. Celui-ci veut continuer, il est ravis. Seul bémol quelques gazs. On revoit légèrement l'apport en protéine.",
+  height:1.83,
+  weight:82,
+  body_fat:19,
+  visceral_fat:10,
+  muscle_mass:53
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(13) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : mise en place d'un régime drastique",
+  height:1.60,
+  weight:95,
+  body_fat:30,
+  visceral_fat:15,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"Le patient supporte mal son régime restrictif. Il a faim et grignotte souvent. Je lui ai expliqué l'importance d'être sérieux sur ce plan alimentaire pour sa santé (cardiaque, obésité morbide, ...)",
+  height:1.60,
+  weight:92,
+  body_fat:29,
+  visceral_fat:14,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"Dernier RDV. Le patient ne veut plus continuer le suivi malgré la perte de poids entamée.",
+  height:1.60,
+  weight:89,
+  body_fat:28,
+  visceral_fat:13,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(14) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : changement alimentaire. La patient souhaite devenir végétarien. Explication des besoins et comment s'y préparer",
+  height:1.76,
+  weight:69,
+  body_fat:22,
+  visceral_fat:11,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"La patient supporte plutôt bien son nouveau régime àlimentaire. On passe à l'étape 2 : présentation des recettes et les aliments inconnus. Passé du lat préparé au fait maison.",
+  height:1.76,
+  weight:68,
+  body_fat:22,
+  visceral_fat:11,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"La ptient a été très réceptif, ravie de ce changement et à l'aise dans ses nouvelles habitudes. Prochain RDV dans 6 mois pour évaluer l'évolution du ses besoins",
+  height:1.76,
+  weight:69,
+  body_fat:22,
+  visceral_fat:11,
+  muscle_mass:40
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(15) 
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date:"25/04/2021 14:00",
+  content:"Premier rendez-vous : Patient atteint de TCA. Gros travail à faire sur l'limentation en général. Poids beaucoup trop bas, si aucune évolution une hospitalisation sera nécessaire",
+  height:1.76,
+  weight:50,
+  body_fat:14,
+  visceral_fat:8,
+  muscle_mass:30
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "26/05/2021 16:00",
+  content:"Le patient a du mal à suivre son plan alimentaire et ment sur ce qu'il mange. Je lui propose de rencontrer un psy pour l'aider dans sa démarche.",
+  height:1.76,
+  weight:52,
+  body_fat:15,
+  visceral_fat:8,
+  muscle_mass:30
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id:patient.id,
+  nutritionist_id:patient.nutritionist.id,
+  date: "22/06/2021 10:00",
+  content:"Le patient a fait les démarches nécessaire et évolue lentement. Je lui demande de controler régulièrement ses constantes. En cas de chute sous les 45 kg on l'hospitalise.",
+  height:1.76,
+  weight:53,
+  body_fat:15,
+  visceral_fat:8,
+  muscle_mass:30
+)
+appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+############################################
 
 ############################################
 ####################### Create logbooks
@@ -531,6 +971,236 @@ Logbook.create(
   patient_id: 5,
   title: "Sortie shooping",
   content: "Cet après-midi c'était shopping, et pause snack vers 16h. J'ai mangé une glace",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 6,
+  title: "Sensation de faim",
+  content: "J'ai beaucou de mal à assumer cette sensation de faim qui m'obsède aujourd'hui",
+  is_shared: false,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 6,
+  title: "Sortie avec les amis",
+  content: "Lors de notre sortie avec les amis j'ai pris un croissant avec mon café",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 7,
+  title: "Les lasagnes",
+  content: "Manger des lasagnes 2 fois par jour est il mauvais pour la santé ?",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 7,
+  title: "Perte de poids",
+  content: "Aujourd'hui je suis fier de moi, ma balance affiche 3 kg de moins",
+  is_shared: false,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 8,
+  title: "Végé",
+  content: "C'est décidé j'arr^te la viande et deviens Vegan extrêmiste!",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 8,
+  title: "Les pauvres",
+  content: "L'industrie de la viande et un ennemie de la VIE. Vive Nicolas Hulot",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 9,
+  title: "J'ai faim",
+  content: "Ce régime hyper protéiné me donne des gaz... En plus j'ai faim",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 9,
+  title: "Céleri",
+  content: "Note à moi même: le céleri c'est pas bon",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 10,
+  title: "Petite faim",
+  content: "Ce jour j'ai mangé une barre chocolat mais pas plus...",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 10,
+  title: "Alcool",
+  content: "Hier soirée, j'ai craqué... j'ai bu 10 pintes...",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 11,
+  title: "Sport",
+  content: "Sortie running 10km en 55 min mon record",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 11,
+  title: "Crossfit",
+  content: "J'ai essayé le crossfit quel sport de brute",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 12,
+  title: "natation",
+  content: "Depuis 1 mois je fait 1h de natation/semaine",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 12,
+  title: "Natation suite",
+  content: "Mon maillot me donne des irritations aux cuisses... Ça pique",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 13,
+  title: "repas lundi",
+  content: "Riz, dinde, haricot vert et yaourt nature !",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 13,
+  title: "repas mardi",
+  content: "Double macdo ...",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 14,
+  title: "repas jeudi",
+  content: "Riz, dinde, haricot vert et yaourt nature !",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 14,
+  title: "Note",
+  content: "Le gras n'est pas mauvais si on sait le doser",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+Logbook.create(
+  patient_id: 15,
+  title: "Demain repas...",
+  content: "J'ai refusé une invitation par peur ge reprendre du poids",
+  is_shared: true,
+)
+logbooks_count += 1
+system("clear")
+puts "#{logbooks_count} logbooks created"
+puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
+
+
+Logbook.create(
+  patient_id: 15,
+  title: "c'est le WE",
+  content: "J'ai le droit à mon repas sans restriction j'ai attendu ça toute la semaine!",
   is_shared: true,
 )
 logbooks_count += 1
