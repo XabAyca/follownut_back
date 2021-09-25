@@ -206,7 +206,7 @@ puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 Patient.create(
   first_name:"Amandine",
   last_name: "Salvi",
-  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  date_of_birth: "1992-11-14",
   gender: 2,
   email: "amandine.salvi@yopmail.com",
   password:"azerty123",
@@ -222,7 +222,7 @@ puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 Patient.create(
   first_name:"Bastien",
   last_name: "Arno",
-  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  date_of_birth: "1998-09-21",
   gender: 1,
   email: "bastien.arno@yopmail.com",
   password:"azerty123",
@@ -238,7 +238,7 @@ puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 Patient.create(
   first_name:"Alexandre",
   last_name: "Bertin",
-  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  date_of_birth: "1987-02-14",
   gender: 1,
   email: "alexandre.bertin@yopmail.com",
   password:"azerty123",
@@ -254,7 +254,7 @@ puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 Patient.create(
   first_name:"Nicolas",
   last_name: "Deschamp",
-  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  date_of_birth: "1963-07-16",
   gender: 1,
   email: "nicolas.deschamp@yopmail.com",
   password:"azerty123",
@@ -270,7 +270,7 @@ puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
 Patient.create(
   first_name:"Melanie",
   last_name: "Lano",
-  date_of_birth: Faker::Date.birthday(min_age: 10, max_age: 70),
+  date_of_birth: "1983-04-18",
   gender: 2,
   email: "melanie.lano@yopmail.com",
   password:"azerty123",
@@ -280,7 +280,7 @@ Patient.create(
 patients_count += 1
 system("clear")
 puts "#{patients_count} patients created"
-puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|"
+puts "|"+("█"*patients_count)+(" "*(patients_number-patients_count))+"|" 
 
 
 Patient.create(
@@ -606,6 +606,258 @@ Appointment.create(
   muscle_mass:30
 )
 appointments_count +=1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+patient = Patient.find(6) 
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "27/01/2021 11:00",
+  content: "Premier rendez-vous avec Amandine qui a un léger surpoids. Mise en place d'un plan de réquilibrage alimentaire.",
+  height: 1.63,
+  weight: 63,
+  body_fat: 35,
+  visceral_fat: 15,
+  muscle_mass: 31
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "26/03/2021 16:00",
+  content: "Des progrés encourageant. Amandine a perdu 3kg par rapport à notre dernier rendez-vous, 1cm de tour de taille de gagné.",
+  height: 1.63,
+  weight: 61,
+  body_fat: 34,
+  visceral_fat: 14,
+  muscle_mass: 31
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "02/06/2021 10:00",
+  content: "Amandine a persévéré et est revenue sur une echelle de poids normale pour sa physionomie. Encore quelques semaines et elle aura atteint son objectif de 56 kg.",
+  height: 1.63,
+  weight: 58,
+  body_fat: 32,
+  visceral_fat: 12,
+  muscle_mass: 32
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+
+
+patient = Patient.find(7) 
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "13/02/2021 09:00",
+  content: "M. Arno pratique la course longue distance en compétition. et me rencontre donc aujourd'hui pour travailler sur son alimentation et ainsi améliorer ses phases de récuperation.",
+  height: 1.78,
+  weight: 69,
+  body_fat: 15,
+  visceral_fat: 10,
+  muscle_mass: 47
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "21/03/2021 16:00",
+  content: "Rien à signaler depuis notre dernier rendez-vous. Tous les voyants sont au vert.",
+  height: 1.78,
+  weight: 68,
+  body_fat: 14.5,
+  visceral_fat: 10,
+  muscle_mass: 47
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "08/04/2021 11:00",
+  content: "M. Arno a pris un peu de poids en raison d'une période d'inactivité consécutive à une blessure.",
+  height: 1.78,
+  weight: 71,
+  body_fat: 16,
+  visceral_fat: 11,
+  muscle_mass: 47
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+
+patient = Patient.find(8) 
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "14/01/2021 14:00",
+  content: "Première rencontre avec M. Bertin qui présente une surcharge pondérale d'environ 15 kg malgré ses efforts pour perdre du poids. Mise en place d'un régime hypocalorique.",
+  height: 1.95,
+  weight: 101,
+  body_fat: 25,
+  visceral_fat: 14,
+  muscle_mass: 59
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "04/02/2021 10:00",
+  content: "De très bons resultats en l'espace de 3 semaines avec une perte de poids de 4kg. M. Bertin a suivi mes conseils en ajoutant plus de légumes à son alimentation et en arrêtant de grignoter entre les repas.",
+  height: 1.95,
+  weight: 97,
+  body_fat: 24,
+  visceral_fat: 13.5,
+  muscle_mass: 59
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "02/03/2021 10:00",
+  content: "2 kg supplémentaires de perdu. M. Bertin est sur la bonne voie.",
+  height: 1.95,
+  weight: 95,
+  body_fat: 23,
+  visceral_fat: 12.5,
+  muscle_mass: 59
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+
+
+patient = Patient.find(9) 
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "28/06/2021 14:30",
+  content: "M. Deschamp me rencontre pour la première fois aujourd'hui. Au cours des dix dernières années, il n'a pas été particulièrement actif sur le plan sportif et n'a pas fait attention à son alimentation, et les kilos se sont accumulés. Son objectif est de courir un marathon l'année prochaine, mais il doit absolument perdre du poids pour y parvenir.",
+  height: 1.81,
+  weight: 81,
+  body_fat: 20,
+  visceral_fat: 14,
+  muscle_mass: 48
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "29/07/2021 16:00",
+  content: "Le premier mois n'a pas été facile mais il y a quand même une perte de poids significative, et le sommeil du patient s'est amélioré.",
+  height: 1.81,
+  weight: 79.5,
+  body_fat: 19,
+  visceral_fat: 13.5,
+  muscle_mass: 48
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "02/09/2021 10:00",
+  content: "Des résultats dans la continuité de ce qui a été observé précédemment. Je conseille maintenant au patient de varier les sports, par exemple d'ajouter du vélo et/ou de la natation pour stimuler la prise de muscle.",
+  height: 1.81,
+  weight: 76,
+  body_fat: 18,
+  visceral_fat: 13,
+  muscle_mass: 48.5
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+
+
+patient = Patient.find(10) 
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "19/05/2021 15:00",
+  content: "Mme. Lano approche la quarantaine et souhaiterait perdre du poids maintenant que tous ses enfants sont à l'école. Nous avons décidé ensemble de fixer 53kg comme objectif.",
+  height: 1.59,
+  weight: 60,
+  body_fat: 25,
+  visceral_fat: 15,
+  muscle_mass: 35
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "23/06/2021 16:00",
+  content: "Des résultats plus qu'encourageant après 1 premier mois à suivre le plan de rééquilibrage alimentaire mis en place lors de la session précédente.",
+  height: 1.59,
+  weight: 57.5,
+  body_fat: 23,
+  visceral_fat: 14,
+  muscle_mass: 35.5
+)
+appointments_count += 1
+system("clear")
+puts "#{appointments_count} appointments created"
+puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
+
+Appointment.create(
+  patient_id: patient.id,
+  nutritionist_id: patient.nutritionist.id,
+  date: "27/07/2021 10:00",
+  content: "Les efforts continuent de payer et Mme. Lano est a mi parcourt. Nous décidons aujourd'hui d'ajouter 2 séances de sport par semaine afin d'accélérer la perte de poids.",
+  height: 1.59,
+  weight: 56,
+  body_fat: 22,
+  visceral_fat: 13.5,
+  muscle_mass: 35.5
+)
+appointments_count += 1
 system("clear")
 puts "#{appointments_count} appointments created"
 puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_count)+"|"))
