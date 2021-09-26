@@ -385,7 +385,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/06/2021 16:00",
+  date: "21/06/2021 16:00",
   content:"La perte de poids a été bien entamé. La patient suit correctement le plan alimentaire. Il parait satisfait et supporte bien les consignes. Pas de soucis à signaler.",
   height:1.74,
   weight:94,
@@ -401,7 +401,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/07/2021 10:00",
+  date: "22/07/2021 14:00",
   content:"Grosse perte de poids sur ce mois. La patient est très satisfait. Nous avons décidé d'entamer la seconde partie avec la phase de stabilisation. Mise en place d'un nouveau plan alimentaire avec réintroduction progressive des aliments légèrement sucré?",
   height:1.74,
   weight:90,
@@ -418,7 +418,7 @@ patient = Patient.find(2)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/04/2021 14:00",
+  date:"12/04/2021 14:00",
   content:"Premier rendez-vous : mise en place d'un plan alimentaire HP pour sportif",
   height:1.83,
   weight:80,
@@ -434,7 +434,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/05/2021 16:00",
+  date: "16/05/2021 10:00",
   content:"Le patient supporte bien son nouveau plan alimentaire. La prise de masse musculaire commence. Il semble moins fatigué et plus performant. On continue.",
   height:1.83,
   weight:82,
@@ -450,7 +450,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/06/2021 10:00",
+  date: "21/06/2021 13:00",
   content:"Très satisfait, les performances du patient ont explosé. Celui-ci veut continuer, il est ravis. Seul bémol quelques gazs. On revoit légèrement l'apport en protéine.",
   height:1.83,
   weight:82,
@@ -467,7 +467,7 @@ patient = Patient.find(3)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/04/2021 14:00",
+  date:"24/04/2021 14:00",
   content:"Premier rendez-vous : mise en place d'un régime drastique",
   height:1.60,
   weight:95,
@@ -483,7 +483,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/05/2021 16:00",
+  date: "29/05/2021 10:00",
   content:"Le patient supporte mal son régime restrictif. Il a faim et grignotte souvent. Je lui ai expliqué l'importance d'être sérieux sur ce plan alimentaire pour sa santé (cardiaque, obésité morbide, ...)",
   height:1.60,
   weight:92,
@@ -499,7 +499,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/06/2021 10:00",
+  date: "23/06/2021 10:00",
   content:"Dernier RDV. Le patient ne veut plus continuer le suivi malgré la perte de poids entamée.",
   height:1.60,
   weight:89,
@@ -516,7 +516,7 @@ patient = Patient.find(4)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/04/2021 14:00",
+  date:"03/04/2021 10:00",
   content:"Premier rendez-vous : changement alimentaire. La patient souhaite devenir végétarien. Explication des besoins et comment s'y préparer",
   height:1.76,
   weight:69,
@@ -532,7 +532,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/05/2021 16:00",
+  date: "11/05/2021 16:00",
   content:"La patient supporte plutôt bien son nouveau régime àlimentaire. On passe à l'étape 2 : présentation des recettes et les aliments inconnus. Passé du lat préparé au fait maison.",
   height:1.76,
   weight:68,
@@ -548,7 +548,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/06/2021 10:00",
+  date: "16/06/2021 10:00",
   content:"La ptient a été très réceptif, ravie de ce changement et à l'aise dans ses nouvelles habitudes. Prochain RDV dans 6 mois pour évaluer l'évolution du ses besoins",
   height:1.76,
   weight:69,
@@ -565,7 +565,7 @@ patient = Patient.find(5)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/04/2021 14:00",
+  date:"09/08/2020 14:00",
   content:"Premier rendez-vous : Patient atteint de TCA. Gros travail à faire sur l'limentation en général. Poids beaucoup trop bas, si aucune évolution une hospitalisation sera nécessaire",
   height:1.76,
   weight:50,
@@ -581,7 +581,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/05/2021 16:00",
+  date: "11/09/2020 16:00",
   content:"Le patient a du mal à suivre son plan alimentaire et ment sur ce qu'il mange. Je lui propose de rencontrer un psy pour l'aider dans sa démarche.",
   height:1.76,
   weight:52,
@@ -597,7 +597,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/06/2021 10:00",
+  date: "13/10/2020 10:00",
   content:"Le patient a fait les démarches nécessaire et évolue lentement. Je lui demande de controler régulièrement ses constantes. En cas de chute sous les 45 kg on l'hospitalise.",
   height:1.76,
   weight:53,
@@ -697,7 +697,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id: patient.id,
   nutritionist_id: patient.nutritionist.id,
-  date: "08/04/2021 11:00",
+  date: "08/05/2021 11:00",
   content: "M. Arno a pris un peu de poids en raison d'une période d'inactivité consécutive à une blessure.",
   height: 1.78,
   weight: 71,
@@ -866,7 +866,7 @@ patient = Patient.find(11)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/05/2021 14:00",
+  date:"25/05/2021 16:00",
   content:"Premier rendez-vous : mise en place d'un règime hypo calorique pour perte de poids rapide",
   height:1.74,
   weight:95,
@@ -915,7 +915,7 @@ patient = Patient.find(12)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/04/2021 14:00",
+  date:"15/01/2021 14:00",
   content:"Premier rendez-vous : mise en place d'un plan alimentaire HP pour sportif",
   height:1.83,
   weight:80,
@@ -931,7 +931,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/05/2021 16:00",
+  date: "26/02/2021 16:00",
   content:"Le patient supporte bien son nouveau plan alimentaire. La prise de masse musculaire commence. Il semble moins fatigué et plus performant. On continue.",
   height:1.83,
   weight:82,
@@ -947,7 +947,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/06/2021 10:00",
+  date: "22/03/2021 10:00",
   content:"Très satisfait, les performances du patient ont explosé. Celui-ci veut continuer, il est ravis. Seul bémol quelques gazs. On revoit légèrement l'apport en protéine.",
   height:1.83,
   weight:82,
@@ -964,7 +964,7 @@ patient = Patient.find(13)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/04/2021 14:00",
+  date:"13/03/2021 14:00",
   content:"Premier rendez-vous : mise en place d'un régime drastique",
   height:1.60,
   weight:95,
@@ -980,7 +980,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/05/2021 16:00",
+  date: "14/04/2021 16:00",
   content:"Le patient supporte mal son régime restrictif. Il a faim et grignotte souvent. Je lui ai expliqué l'importance d'être sérieux sur ce plan alimentaire pour sa santé (cardiaque, obésité morbide, ...)",
   height:1.60,
   weight:92,
@@ -996,7 +996,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/06/2021 10:00",
+  date: "22/05/2021 10:00",
   content:"Dernier RDV. Le patient ne veut plus continuer le suivi malgré la perte de poids entamée.",
   height:1.60,
   weight:89,
@@ -1013,7 +1013,7 @@ patient = Patient.find(14)
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date:"25/04/2021 14:00",
+  date:"28/04/2021 17:00",
   content:"Premier rendez-vous : changement alimentaire. La patient souhaite devenir végétarien. Explication des besoins et comment s'y préparer",
   height:1.76,
   weight:69,
@@ -1029,7 +1029,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "26/05/2021 16:00",
+  date: "27/05/2021 16:00",
   content:"La patient supporte plutôt bien son nouveau régime àlimentaire. On passe à l'étape 2 : présentation des recettes et les aliments inconnus. Passé du lat préparé au fait maison.",
   height:1.76,
   weight:68,
@@ -1045,7 +1045,7 @@ puts "|"+("█"*((appointments_count))+(" "*(appointments_number-appointments_co
 Appointment.create(
   patient_id:patient.id,
   nutritionist_id:patient.nutritionist.id,
-  date: "22/06/2021 10:00",
+  date: "25/06/2021 10:00",
   content:"La ptient a été très réceptif, ravie de ce changement et à l'aise dans ses nouvelles habitudes. Prochain RDV dans 6 mois pour évaluer l'évolution du ses besoins",
   height:1.76,
   weight:69,
