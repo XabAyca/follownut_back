@@ -1291,7 +1291,7 @@ puts "|"+("█"*logbooks_count)+(" "*(logbooks_number-logbooks_count))+"|"
 Logbook.create(
   patient_id: 8,
   title: "Les pauvres",
-  content: "L'industrie de la viande et un ennemie de la VIE. Vive Nicolas Hulot",
+  content: "L'industrie de la viande est un ennemie de la VIE. Vive Nicolas Hulot",
   is_shared: true,
 )
 logbooks_count += 1
